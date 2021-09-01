@@ -1,9 +1,16 @@
 <!DOCTYPE html>
 <html>
 <body>
-
-<h1>My First Heading</h1>
-<p>My first paragraph.</p>
-
+<h1>TI4 Combat Roller</h1>
+<p>Input your rolls below in the format (number of dice)h(required hit)</p>
+<form>
+    <input type="text" id="diceInput" name="diceInput" placeholder="ex: 4h9 2h7 2h3">
+    <br>
+    <br>
+    <button id="submit" type="button">Submit</button>
+    <p id="resultText" name="resultTextHits"></p>
+    <div id="failures"></div>
+</form>
+<script src="TI4CombatRoller.js"></script>
 </body>
 </html>
