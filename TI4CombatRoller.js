@@ -58,7 +58,7 @@ function mainCompute() {
     document.getElementById("failures").innerHTML = "";
     for (let property in failureTotal) {
         let newParagraph = document.createElement("p");
-        newParagraph.appendChild(document.createTextNode(`${property} failures on the ${failureTotal[property]} hit count`));
+        newParagraph.appendChild(document.createTextNode(`${failureTotal[property]} failures on the ${property} hit count`));
         document.getElementById("failures").appendChild(newParagraph);
     }
 
