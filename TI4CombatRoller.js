@@ -1,13 +1,15 @@
 
+"use strict";
+
 function randomNumber(min, max) {
     const r = Math.random()*(max-min) + min
     return Math.floor(r)
 }
 
 function roller(diceNum, hitVal) {
-    var hits = 0;
-    var roll = 0;
-    var failures = 0;
+    let hits = 0;
+    let roll = 0;
+    let failures = 0;
 
     for (let i = 0; i < diceNum; i++) {
         roll = randomNumber(1, 10);
@@ -26,21 +28,21 @@ const buttonClick = document.getElementById("submit");
 buttonClick.addEventListener("click", mainCompute, false);
 
 function mainCompute() {
-    totalHits = 0
-    bestFailure = 10
-    failureTotal = {}
-    var userInput = document.getElementById('diceInput').value;
+    let totalHits = 0;
+    let bestFailure = 0;
+    let failureTotal = {}
+    let userInput = document.getElementById('diceInput').value;
     userInput = userInput.split(' ')
-    for (i = 0; i < userInput.length; i++) {
+    for (let i = 0; i < userInput.length; i++) {
         userInput[i] = userInput[i].split('h');
     }
-    for (i = 0; i < userInput.length; i++) {
-        for (k = 0; k < userInput[i].length; k++) {
+    for (let i = 0; i < userInput.length; i++) {
+        for (let k = 0; k < userInput[i].length; k++) {
             userInput[i][k] = parseInt(userInput[i][k]);
         }
     }
-    for (i = 0; i < userInput.length; i++){
-        var hitsAndFailures = roller(userInput[i][0], userInput[i][1])
+    for (let i = 0; i < userInput.length; i++){
+        let hitsAndFailures = roller(userInput[i][0], userInput[i][1])
         if (hitsAndFailures[0] >= 1) {
             totalHits = totalHits + hitsAndFailures[0];
         }
@@ -53,10 +55,11 @@ function mainCompute() {
         continue
     }
     document.getElementById("resultText").innerHTML = `${totalHits} hit(s)`
-    for (i = 0; i < failureTotal.length; i++) {
-        var newLine = document.createElement("p");
-        newLine.appendChild(document.createTextNode(`${failureTotal[i][1]} failures on the ${failureTotal[i][0]} hit count`));
-        document.getElementById("failures").appendChild(newLine);
+    document.getElementById("failures").innerHTML = "";
+    for (let property in failureTotal) {
+        let newParagraph = document.createElement("p");
+        newParagraph.appendChild(document.createTextNode(`${property} failures on the ${failureTotal[property]} hit count`));
+        document.getElementById("failures").appendChild(newParagraph);
     }
 
 }
