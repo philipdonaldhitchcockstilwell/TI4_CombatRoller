@@ -10,16 +10,24 @@ function roller(diceNum, hitVal) {
     let hits = 0;
     let roll = 0;
     let failures = 0;
-
+    let ship = ""
     for (let i = 0; i < diceNum; i++) {
+        ship = ""
+        ship = document.createElement("div")
+        ship.className = "ship"
+        let shipText = document.createTextNode(`hits on ${hitVal}`)
+        ship.appendChild(shipText)
         roll = randomNumber(1, 10);
         if (hitVal <= roll) {
             hits = hits + 1;
+            ship.classList.add("hit");
         } else if (hitVal > roll) {
             failures = failures + 1;
+            ship.classList.add("miss");
         } else {
             continue;
         }
+        document.getElementById("ships").appendChild(ship)
     } 
     return [hits, failures];
 }
@@ -36,6 +44,7 @@ function mainCompute() {
     for (let i = 0; i < userInput.length; i++) {
         userInput[i] = userInput[i].split('h');
     }
+    document.getElementById("ships").innerHTML = "";
     for (let i = 0; i < userInput.length; i++) {
         for (let k = 0; k < userInput[i].length; k++) {
             userInput[i][k] = parseInt(userInput[i][k]);

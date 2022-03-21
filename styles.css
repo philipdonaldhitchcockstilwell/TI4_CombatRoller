@@ -28,3 +28,21 @@ form {
     flex-direction: column;
     align-items: center;
 }
+
+.ship {
+    border: 4px solid white;
+    padding: 10px;
+    margin: 2px;
+    color: white;
+    display: inline-block;
+}
+
+.hit {
+    border-color: green;
+    color: green;
+}
+
+.miss {
+    border-color: red;
+    color: red;
+}
