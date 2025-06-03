@@ -109,6 +109,10 @@ form {
     color: white;
 }
 
+#changeFactionBtn {
+    margin-top: 10px;
+}
+
 #modifiers label {
     color: #eee;
     margin-right: 10px;

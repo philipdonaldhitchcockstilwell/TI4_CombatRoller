@@ -24,7 +24,6 @@ async function loadData() {
     const upResp = await fetch('race_upgrades.json');
     raceUpgrades = await upResp.json();
     const raceNames = Object.keys(raceUnits);
-    currentRace = raceNames[0];
     const select = document.getElementById('raceSelect');
     raceNames.forEach(r => {
         const opt = document.createElement('option');
@@ -32,12 +31,37 @@ async function loadData() {
         opt.textContent = r;
         select.appendChild(opt);
     });
-    select.value = currentRace;
+
+    const saved = localStorage.getItem('ti4Faction');
+    if (saved && raceNames.includes(saved)) {
+        currentRace = saved;
+        select.value = saved;
+        document.getElementById('raceSelectContainer').style.display = 'none';
+    } else {
+        currentRace = raceNames[0];
+        select.value = currentRace;
+        document.getElementById('raceSelectContainer').style.display = 'block';
+    }
+
+    createUnitControls();
+
     select.addEventListener('change', () => {
         currentRace = select.value;
+    });
+
+    const saveBtn = document.getElementById('saveFaction');
+    saveBtn.addEventListener('click', () => {
+        currentRace = select.value;
+        localStorage.setItem('ti4Faction', currentRace);
+        document.getElementById('raceSelectContainer').style.display = 'none';
         createUnitControls();
     });
-    createUnitControls();
+
+    const changeBtn = document.getElementById('changeFactionBtn');
+    changeBtn.addEventListener('click', () => {
+        select.value = currentRace;
+        document.getElementById('raceSelectContainer').style.display = 'block';
+    });
 }
 
 /**
