@@ -107,10 +107,12 @@ function createUnitControls() {
         div.className = "unit-control";
         div.innerHTML = `
             <span class="unit-name">${name}</span>
-            <button type="button" class="add" data-unit="${key}">+</button>
-            <button type="button" class="remove" data-unit="${key}">-</button>
-            <span id="count-${key}">0</span>
-            <label><input type="checkbox" id="upgrade-${key}"> ${name} II</label>
+            <div class="counter">
+                <button type="button" class="remove" data-unit="${key}">-</button>
+                <span id="count-${key}" class="count">0</span>
+                <button type="button" class="add" data-unit="${key}">+</button>
+            </div>
+            <label class="upgrade"><input type="checkbox" id="upgrade-${key}"> ${name} II</label>
         `;
         list.appendChild(div);
         counts[key] = 0;
