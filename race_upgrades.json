@@ -1,0 +1,452 @@
+{
+  "Arborec": {
+    "Dreadnought": {
+      "dice": 1,
+      "hit": 5
+    },
+    "Cruiser": {
+      "dice": 1,
+      "hit": 6
+    },
+    "Destroyer": {
+      "dice": 1,
+      "hit": 8
+    },
+    "Fighter": {
+      "dice": 1,
+      "hit": 8
+    },
+    "PDS": {
+      "dice": 1,
+      "hit": null
+    },
+    "Ground": {
+      "dice": 1,
+      "hit": 7
+    }
+  },
+  "Creuss": {
+    "Dreadnought": {
+      "dice": 1,
+      "hit": 5
+    },
+    "Cruiser": {
+      "dice": 1,
+      "hit": 6
+    },
+    "Destroyer": {
+      "dice": 1,
+      "hit": 8
+    },
+    "Fighter": {
+      "dice": 1,
+      "hit": 8
+    },
+    "PDS": {
+      "dice": 1,
+      "hit": null
+    },
+    "Ground": {
+      "dice": 1,
+      "hit": 7
+    }
+  },
+  "Hacan": {
+    "Dreadnought": {
+      "dice": 1,
+      "hit": 5
+    },
+    "Cruiser": {
+      "dice": 1,
+      "hit": 6
+    },
+    "Destroyer": {
+      "dice": 1,
+      "hit": 8
+    },
+    "Fighter": {
+      "dice": 1,
+      "hit": 8
+    },
+    "PDS": {
+      "dice": 1,
+      "hit": null
+    },
+    "Ground": {
+      "dice": 1,
+      "hit": 7
+    }
+  },
+  "JolNar": {
+    "Dreadnought": {
+      "dice": 1,
+      "hit": 5
+    },
+    "Cruiser": {
+      "dice": 1,
+      "hit": 6
+    },
+    "Destroyer": {
+      "dice": 1,
+      "hit": 8
+    },
+    "Fighter": {
+      "dice": 1,
+      "hit": 8
+    },
+    "PDS": {
+      "dice": 1,
+      "hit": null
+    },
+    "Ground": {
+      "dice": 1,
+      "hit": 7
+    }
+  },
+  "L1Z1X": {
+    "Dreadnought": {
+      "dice": 1,
+      "hit": 4
+    },
+    "Cruiser": {
+      "dice": 1,
+      "hit": 6
+    },
+    "Destroyer": {
+      "dice": 1,
+      "hit": 8
+    },
+    "Fighter": {
+      "dice": 1,
+      "hit": 8
+    },
+    "PDS": {
+      "dice": 1,
+      "hit": null
+    },
+    "Ground": {
+      "dice": 1,
+      "hit": 7
+    }
+  },
+  "Letnev": {
+    "Dreadnought": {
+      "dice": 1,
+      "hit": 5
+    },
+    "Cruiser": {
+      "dice": 1,
+      "hit": 6
+    },
+    "Destroyer": {
+      "dice": 1,
+      "hit": 8
+    },
+    "Fighter": {
+      "dice": 1,
+      "hit": 8
+    },
+    "PDS": {
+      "dice": 1,
+      "hit": null
+    },
+    "Ground": {
+      "dice": 1,
+      "hit": 7
+    }
+  },
+  "Mentak": {
+    "Dreadnought": {
+      "dice": 1,
+      "hit": 5
+    },
+    "Cruiser": {
+      "dice": 1,
+      "hit": 6
+    },
+    "Destroyer": {
+      "dice": 1,
+      "hit": 8
+    },
+    "Fighter": {
+      "dice": 1,
+      "hit": 8
+    },
+    "PDS": {
+      "dice": 1,
+      "hit": null
+    },
+    "Ground": {
+      "dice": 1,
+      "hit": 7
+    }
+  },
+  "Muaat": {
+    "Dreadnought": {
+      "dice": 1,
+      "hit": 5
+    },
+    "Cruiser": {
+      "dice": 1,
+      "hit": 6
+    },
+    "Destroyer": {
+      "dice": 1,
+      "hit": 8
+    },
+    "Fighter": {
+      "dice": 1,
+      "hit": 8
+    },
+    "PDS": {
+      "dice": 1,
+      "hit": null
+    },
+    "Ground": {
+      "dice": 1,
+      "hit": 7
+    },
+    "WarSun": {
+      "dice": 3,
+      "hit": 3
+    }
+  },
+  "Naalu": {
+    "Dreadnought": {
+      "dice": 1,
+      "hit": 5
+    },
+    "Cruiser": {
+      "dice": 1,
+      "hit": 6
+    },
+    "Destroyer": {
+      "dice": 1,
+      "hit": 8
+    },
+    "Fighter": {
+      "dice": 1,
+      "hit": 7
+    },
+    "PDS": {
+      "dice": 1,
+      "hit": null
+    },
+    "Ground": {
+      "dice": 1,
+      "hit": 7
+    }
+  },
+  "Saar": {
+    "Dreadnought": {
+      "dice": 1,
+      "hit": 5
+    },
+    "Cruiser": {
+      "dice": 1,
+      "hit": 6
+    },
+    "Destroyer": {
+      "dice": 1,
+      "hit": 8
+    },
+    "Fighter": {
+      "dice": 1,
+      "hit": 8
+    },
+    "PDS": {
+      "dice": 1,
+      "hit": null
+    },
+    "Ground": {
+      "dice": 1,
+      "hit": 7
+    }
+  },
+  "Sardakk": {
+    "Dreadnought": {
+      "dice": 1,
+      "hit": 5
+    },
+    "Cruiser": {
+      "dice": 1,
+      "hit": 6
+    },
+    "Destroyer": {
+      "dice": 1,
+      "hit": 8
+    },
+    "Fighter": {
+      "dice": 1,
+      "hit": 8
+    },
+    "PDS": {
+      "dice": 1,
+      "hit": null
+    },
+    "Ground": {
+      "dice": 1,
+      "hit": 7
+    }
+  },
+  "Sol": {
+    "Dreadnought": {
+      "dice": 1,
+      "hit": 5
+    },
+    "Cruiser": {
+      "dice": 1,
+      "hit": 6
+    },
+    "Destroyer": {
+      "dice": 1,
+      "hit": 8
+    },
+    "Fighter": {
+      "dice": 1,
+      "hit": 8
+    },
+    "PDS": {
+      "dice": 1,
+      "hit": null
+    },
+    "Ground": {
+      "dice": 1,
+      "hit": 6
+    },
+    "Carrier": {
+      "dice": 1,
+      "hit": 9
+    }
+  },
+  "Virus": {
+    "Dreadnought": {
+      "dice": 1,
+      "hit": 5
+    },
+    "Cruiser": {
+      "dice": 1,
+      "hit": 6
+    },
+    "Destroyer": {
+      "dice": 1,
+      "hit": 8
+    },
+    "Fighter": {
+      "dice": 1,
+      "hit": 8
+    },
+    "PDS": {
+      "dice": 1,
+      "hit": null
+    },
+    "Ground": {
+      "dice": 1,
+      "hit": 7
+    }
+  },
+  "Winnu": {
+    "Dreadnought": {
+      "dice": 1,
+      "hit": 5
+    },
+    "Cruiser": {
+      "dice": 1,
+      "hit": 6
+    },
+    "Destroyer": {
+      "dice": 1,
+      "hit": 8
+    },
+    "Fighter": {
+      "dice": 1,
+      "hit": 8
+    },
+    "PDS": {
+      "dice": 1,
+      "hit": null
+    },
+    "Ground": {
+      "dice": 1,
+      "hit": 7
+    }
+  },
+  "Xxcha": {
+    "Dreadnought": {
+      "dice": 1,
+      "hit": 5
+    },
+    "Cruiser": {
+      "dice": 1,
+      "hit": 6
+    },
+    "Destroyer": {
+      "dice": 1,
+      "hit": 8
+    },
+    "Fighter": {
+      "dice": 1,
+      "hit": 8
+    },
+    "PDS": {
+      "dice": 1,
+      "hit": null
+    },
+    "Ground": {
+      "dice": 1,
+      "hit": 7
+    }
+  },
+  "Yin": {
+    "Dreadnought": {
+      "dice": 1,
+      "hit": 5
+    },
+    "Cruiser": {
+      "dice": 1,
+      "hit": 6
+    },
+    "Destroyer": {
+      "dice": 1,
+      "hit": 8
+    },
+    "Fighter": {
+      "dice": 1,
+      "hit": 8
+    },
+    "PDS": {
+      "dice": 1,
+      "hit": null
+    },
+    "Ground": {
+      "dice": 1,
+      "hit": 7
+    }
+  },
+  "Yssaril": {
+    "Dreadnought": {
+      "dice": 1,
+      "hit": 5
+    },
+    "Cruiser": {
+      "dice": 1,
+      "hit": 6
+    },
+    "Destroyer": {
+      "dice": 1,
+      "hit": 8
+    },
+    "Fighter": {
+      "dice": 1,
+      "hit": 8
+    },
+    "PDS": {
+      "dice": 1,
+      "hit": null
+    },
+    "Ground": {
+      "dice": 1,
+      "hit": 7
+    }
+  }
+}

@@ -46,3 +46,17 @@ form {
     border-color: red;
     color: red;
 }
+
+.unit-control {
+    color: white;
+    margin: 4px;
+}
+
+.unit-control button {
+    margin: 0 2px;
+}
+
+#raceSelectContainer {
+    margin: 8px 0;
+    color: white;
+}
