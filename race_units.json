@@ -1,0 +1,716 @@
+{
+  "Arborec": {
+    "WarSun": {
+      "dice": 3,
+      "hit": 3
+    },
+    "Dreadnought": {
+      "dice": 1,
+      "hit": 5
+    },
+    "Cruiser": {
+      "dice": 1,
+      "hit": 7
+    },
+    "Carrier": {
+      "dice": 1,
+      "hit": 9
+    },
+    "Destroyer": {
+      "dice": 1,
+      "hit": 9
+    },
+    "Fighter": {
+      "dice": 1,
+      "hit": 9
+    },
+    "PDS": {
+      "dice": 1,
+      "hit": null
+    },
+    "Ground": {
+      "dice": 1,
+      "hit": 8
+    },
+    "ExperimentalBattlestation": {
+      "dice": 1,
+      "hit": null
+    },
+    "Flagship": {
+      "dice": 2,
+      "hit": 7
+    }
+  },
+  "Creuss": {
+    "WarSun": {
+      "dice": 3,
+      "hit": 3
+    },
+    "Dreadnought": {
+      "dice": 1,
+      "hit": 5
+    },
+    "Cruiser": {
+      "dice": 1,
+      "hit": 7
+    },
+    "Carrier": {
+      "dice": 1,
+      "hit": 9
+    },
+    "Destroyer": {
+      "dice": 1,
+      "hit": 9
+    },
+    "Fighter": {
+      "dice": 1,
+      "hit": 9
+    },
+    "PDS": {
+      "dice": 1,
+      "hit": null
+    },
+    "Ground": {
+      "dice": 1,
+      "hit": 8
+    },
+    "ExperimentalBattlestation": {
+      "dice": 1,
+      "hit": null
+    },
+    "Flagship": {
+      "dice": 1,
+      "hit": 5
+    }
+  },
+  "Hacan": {
+    "WarSun": {
+      "dice": 3,
+      "hit": 3
+    },
+    "Dreadnought": {
+      "dice": 1,
+      "hit": 5
+    },
+    "Cruiser": {
+      "dice": 1,
+      "hit": 7
+    },
+    "Carrier": {
+      "dice": 1,
+      "hit": 9
+    },
+    "Destroyer": {
+      "dice": 1,
+      "hit": 9
+    },
+    "Fighter": {
+      "dice": 1,
+      "hit": 9
+    },
+    "PDS": {
+      "dice": 1,
+      "hit": null
+    },
+    "Ground": {
+      "dice": 1,
+      "hit": 8
+    },
+    "ExperimentalBattlestation": {
+      "dice": 1,
+      "hit": null
+    },
+    "Flagship": {
+      "dice": 2,
+      "hit": 7
+    }
+  },
+  "JolNar": {
+    "WarSun": {
+      "dice": 3,
+      "hit": 3
+    },
+    "Dreadnought": {
+      "dice": 1,
+      "hit": 5
+    },
+    "Cruiser": {
+      "dice": 1,
+      "hit": 7
+    },
+    "Carrier": {
+      "dice": 1,
+      "hit": 9
+    },
+    "Destroyer": {
+      "dice": 1,
+      "hit": 9
+    },
+    "Fighter": {
+      "dice": 1,
+      "hit": 9
+    },
+    "PDS": {
+      "dice": 1,
+      "hit": null
+    },
+    "Ground": {
+      "dice": 1,
+      "hit": 8
+    },
+    "ExperimentalBattlestation": {
+      "dice": 1,
+      "hit": null
+    },
+    "Flagship": {
+      "dice": 2,
+      "hit": 6
+    }
+  },
+  "L1Z1X": {
+    "WarSun": {
+      "dice": 3,
+      "hit": 3
+    },
+    "Dreadnought": {
+      "dice": 1,
+      "hit": 5
+    },
+    "Cruiser": {
+      "dice": 1,
+      "hit": 7
+    },
+    "Carrier": {
+      "dice": 1,
+      "hit": 9
+    },
+    "Destroyer": {
+      "dice": 1,
+      "hit": 9
+    },
+    "Fighter": {
+      "dice": 1,
+      "hit": 9
+    },
+    "PDS": {
+      "dice": 1,
+      "hit": null
+    },
+    "Ground": {
+      "dice": 1,
+      "hit": 8
+    },
+    "ExperimentalBattlestation": {
+      "dice": 1,
+      "hit": null
+    },
+    "Flagship": {
+      "dice": 2,
+      "hit": 5
+    }
+  },
+  "Letnev": {
+    "WarSun": {
+      "dice": 3,
+      "hit": 3
+    },
+    "Dreadnought": {
+      "dice": 1,
+      "hit": 5
+    },
+    "Cruiser": {
+      "dice": 1,
+      "hit": 7
+    },
+    "Carrier": {
+      "dice": 1,
+      "hit": 9
+    },
+    "Destroyer": {
+      "dice": 1,
+      "hit": 9
+    },
+    "Fighter": {
+      "dice": 1,
+      "hit": 9
+    },
+    "PDS": {
+      "dice": 1,
+      "hit": null
+    },
+    "Ground": {
+      "dice": 1,
+      "hit": 8
+    },
+    "ExperimentalBattlestation": {
+      "dice": 1,
+      "hit": null
+    },
+    "Flagship": {
+      "dice": 2,
+      "hit": 5
+    }
+  },
+  "Mentak": {
+    "WarSun": {
+      "dice": 3,
+      "hit": 3
+    },
+    "Dreadnought": {
+      "dice": 1,
+      "hit": 5
+    },
+    "Cruiser": {
+      "dice": 1,
+      "hit": 7
+    },
+    "Carrier": {
+      "dice": 1,
+      "hit": 9
+    },
+    "Destroyer": {
+      "dice": 1,
+      "hit": 9
+    },
+    "Fighter": {
+      "dice": 1,
+      "hit": 9
+    },
+    "PDS": {
+      "dice": 1,
+      "hit": null
+    },
+    "Ground": {
+      "dice": 1,
+      "hit": 8
+    },
+    "ExperimentalBattlestation": {
+      "dice": 1,
+      "hit": null
+    },
+    "Flagship": {
+      "dice": 2,
+      "hit": 7
+    }
+  },
+  "Muaat": {
+    "WarSun": {
+      "dice": 3,
+      "hit": 3
+    },
+    "Dreadnought": {
+      "dice": 1,
+      "hit": 5
+    },
+    "Cruiser": {
+      "dice": 1,
+      "hit": 7
+    },
+    "Carrier": {
+      "dice": 1,
+      "hit": 9
+    },
+    "Destroyer": {
+      "dice": 1,
+      "hit": 9
+    },
+    "Fighter": {
+      "dice": 1,
+      "hit": 9
+    },
+    "PDS": {
+      "dice": 1,
+      "hit": null
+    },
+    "Ground": {
+      "dice": 1,
+      "hit": 8
+    },
+    "ExperimentalBattlestation": {
+      "dice": 1,
+      "hit": null
+    },
+    "Flagship": {
+      "dice": 2,
+      "hit": 5
+    }
+  },
+  "Naalu": {
+    "WarSun": {
+      "dice": 3,
+      "hit": 3
+    },
+    "Dreadnought": {
+      "dice": 1,
+      "hit": 5
+    },
+    "Cruiser": {
+      "dice": 1,
+      "hit": 7
+    },
+    "Carrier": {
+      "dice": 1,
+      "hit": 9
+    },
+    "Destroyer": {
+      "dice": 1,
+      "hit": 9
+    },
+    "Fighter": {
+      "dice": 1,
+      "hit": 8
+    },
+    "PDS": {
+      "dice": 1,
+      "hit": null
+    },
+    "Ground": {
+      "dice": 1,
+      "hit": 8
+    },
+    "ExperimentalBattlestation": {
+      "dice": 1,
+      "hit": null
+    },
+    "Flagship": {
+      "dice": 2,
+      "hit": 9
+    }
+  },
+  "Saar": {
+    "WarSun": {
+      "dice": 3,
+      "hit": 3
+    },
+    "Dreadnought": {
+      "dice": 1,
+      "hit": 5
+    },
+    "Cruiser": {
+      "dice": 1,
+      "hit": 7
+    },
+    "Carrier": {
+      "dice": 1,
+      "hit": 9
+    },
+    "Destroyer": {
+      "dice": 1,
+      "hit": 9
+    },
+    "Fighter": {
+      "dice": 1,
+      "hit": 9
+    },
+    "PDS": {
+      "dice": 1,
+      "hit": null
+    },
+    "Ground": {
+      "dice": 1,
+      "hit": 8
+    },
+    "ExperimentalBattlestation": {
+      "dice": 1,
+      "hit": null
+    },
+    "Flagship": {
+      "dice": 2,
+      "hit": 5
+    }
+  },
+  "Sardakk": {
+    "WarSun": {
+      "dice": 3,
+      "hit": 3
+    },
+    "Dreadnought": {
+      "dice": 1,
+      "hit": 5
+    },
+    "Cruiser": {
+      "dice": 1,
+      "hit": 7
+    },
+    "Carrier": {
+      "dice": 1,
+      "hit": 9
+    },
+    "Destroyer": {
+      "dice": 1,
+      "hit": 9
+    },
+    "Fighter": {
+      "dice": 1,
+      "hit": 9
+    },
+    "PDS": {
+      "dice": 1,
+      "hit": null
+    },
+    "Ground": {
+      "dice": 1,
+      "hit": 8
+    },
+    "ExperimentalBattlestation": {
+      "dice": 1,
+      "hit": null
+    },
+    "Flagship": {
+      "dice": 2,
+      "hit": 6
+    }
+  },
+  "Sol": {
+    "WarSun": {
+      "dice": 3,
+      "hit": 3
+    },
+    "Dreadnought": {
+      "dice": 1,
+      "hit": 5
+    },
+    "Cruiser": {
+      "dice": 1,
+      "hit": 7
+    },
+    "Carrier": {
+      "dice": 1,
+      "hit": 9
+    },
+    "Destroyer": {
+      "dice": 1,
+      "hit": 9
+    },
+    "Fighter": {
+      "dice": 1,
+      "hit": 9
+    },
+    "PDS": {
+      "dice": 1,
+      "hit": null
+    },
+    "Ground": {
+      "dice": 1,
+      "hit": 7
+    },
+    "ExperimentalBattlestation": {
+      "dice": 1,
+      "hit": null
+    },
+    "Flagship": {
+      "dice": 2,
+      "hit": 5
+    }
+  },
+  "Virus": {
+    "WarSun": {
+      "dice": 3,
+      "hit": 3
+    },
+    "Dreadnought": {
+      "dice": 1,
+      "hit": 5
+    },
+    "Cruiser": {
+      "dice": 1,
+      "hit": 7
+    },
+    "Carrier": {
+      "dice": 1,
+      "hit": 9
+    },
+    "Destroyer": {
+      "dice": 1,
+      "hit": 9
+    },
+    "Fighter": {
+      "dice": 1,
+      "hit": 9
+    },
+    "PDS": {
+      "dice": 1,
+      "hit": null
+    },
+    "Ground": {
+      "dice": 1,
+      "hit": 8
+    },
+    "ExperimentalBattlestation": {
+      "dice": 1,
+      "hit": null
+    },
+    "Flagship": {
+      "dice": 2,
+      "hit": 9
+    }
+  },
+  "Winnu": {
+    "WarSun": {
+      "dice": 3,
+      "hit": 3
+    },
+    "Dreadnought": {
+      "dice": 1,
+      "hit": 5
+    },
+    "Cruiser": {
+      "dice": 1,
+      "hit": 7
+    },
+    "Carrier": {
+      "dice": 1,
+      "hit": 9
+    },
+    "Destroyer": {
+      "dice": 1,
+      "hit": 9
+    },
+    "Fighter": {
+      "dice": 1,
+      "hit": 9
+    },
+    "PDS": {
+      "dice": 1,
+      "hit": null
+    },
+    "Ground": {
+      "dice": 1,
+      "hit": 8
+    },
+    "ExperimentalBattlestation": {
+      "dice": 1,
+      "hit": null
+    },
+    "Flagship": {
+      "dice": 1,
+      "hit": 7
+    }
+  },
+  "Xxcha": {
+    "WarSun": {
+      "dice": 3,
+      "hit": 3
+    },
+    "Dreadnought": {
+      "dice": 1,
+      "hit": 5
+    },
+    "Cruiser": {
+      "dice": 1,
+      "hit": 7
+    },
+    "Carrier": {
+      "dice": 1,
+      "hit": 9
+    },
+    "Destroyer": {
+      "dice": 1,
+      "hit": 9
+    },
+    "Fighter": {
+      "dice": 1,
+      "hit": 9
+    },
+    "PDS": {
+      "dice": 1,
+      "hit": null
+    },
+    "Ground": {
+      "dice": 1,
+      "hit": 8
+    },
+    "ExperimentalBattlestation": {
+      "dice": 1,
+      "hit": null
+    },
+    "Flagship": {
+      "dice": 2,
+      "hit": 7
+    }
+  },
+  "Yin": {
+    "WarSun": {
+      "dice": 3,
+      "hit": 3
+    },
+    "Dreadnought": {
+      "dice": 1,
+      "hit": 5
+    },
+    "Cruiser": {
+      "dice": 1,
+      "hit": 7
+    },
+    "Carrier": {
+      "dice": 1,
+      "hit": 9
+    },
+    "Destroyer": {
+      "dice": 1,
+      "hit": 9
+    },
+    "Fighter": {
+      "dice": 1,
+      "hit": 9
+    },
+    "PDS": {
+      "dice": 1,
+      "hit": null
+    },
+    "Ground": {
+      "dice": 1,
+      "hit": 8
+    },
+    "ExperimentalBattlestation": {
+      "dice": 1,
+      "hit": null
+    },
+    "Flagship": {
+      "dice": 2,
+      "hit": 9
+    }
+  },
+  "Yssaril": {
+    "WarSun": {
+      "dice": 3,
+      "hit": 3
+    },
+    "Dreadnought": {
+      "dice": 1,
+      "hit": 5
+    },
+    "Cruiser": {
+      "dice": 1,
+      "hit": 7
+    },
+    "Carrier": {
+      "dice": 1,
+      "hit": 9
+    },
+    "Destroyer": {
+      "dice": 1,
+      "hit": 9
+    },
+    "Fighter": {
+      "dice": 1,
+      "hit": 9
+    },
+    "PDS": {
+      "dice": 1,
+      "hit": null
+    },
+    "Ground": {
+      "dice": 1,
+      "hit": 8
+    },
+    "ExperimentalBattlestation": {
+      "dice": 1,
+      "hit": null
+    },
+    "Flagship": {
+      "dice": 2,
+      "hit": 5
+    }
+  }
+}

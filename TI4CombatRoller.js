@@ -1,74 +1,161 @@
 
 "use strict";
 
+/**
+ * Return a random integer between min and max (inclusive).
+ */
 function randomNumber(min, max) {
-    const r = Math.random()*(max-min) + min
-    return Math.floor(r)
+    return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-function roller(diceNum, hitVal) {
+let raceUnits = {};
+let raceUpgrades = {};
+let currentRace = null;
+let counts = {};
+
+const DISPLAY_NAMES = {
+    Ground: "Infantry",
+    WarSun: "War Sun",
+};
+
+async function loadData() {
+    const unitsResp = await fetch('race_units.json');
+    raceUnits = await unitsResp.json();
+    const upResp = await fetch('race_upgrades.json');
+    raceUpgrades = await upResp.json();
+    const raceNames = Object.keys(raceUnits);
+    currentRace = raceNames[0];
+    const select = document.getElementById('raceSelect');
+    raceNames.forEach(r => {
+        const opt = document.createElement('option');
+        opt.value = r;
+        opt.textContent = r;
+        select.appendChild(opt);
+    });
+    select.value = currentRace;
+    select.addEventListener('change', () => {
+        currentRace = select.value;
+        createUnitControls();
+    });
+    createUnitControls();
+}
+
+/**
+ * Roll dice for a given specification.
+ * Returns [hits, failures].
+ */
+function roller(spec) {
     let hits = 0;
-    let roll = 0;
     let failures = 0;
-    let ship = ""
-    for (let i = 0; i < diceNum; i++) {
-        ship = ""
-        ship = document.createElement("div")
-        ship.className = "ship"
-        let shipText = document.createTextNode(`hits on ${hitVal}`)
-        ship.appendChild(shipText)
-        roll = randomNumber(1, 10);
-        if (hitVal <= roll) {
-            hits = hits + 1;
-            ship.classList.add("hit");
-        } else if (hitVal > roll) {
-            failures = failures + 1;
-            ship.classList.add("miss");
-        } else {
-            continue;
+
+    for (let i = 0; i < spec.dice; i++) {
+        let result = randomNumber(1, 10) + spec.mod;
+        let rerollsLeft = spec.rerolls;
+
+        while (result < spec.hit && rerollsLeft > 0) {
+            result = randomNumber(1, 10) + spec.mod;
+            rerollsLeft--;
         }
-        document.getElementById("ships").appendChild(ship)
-    } 
+
+        const ship = document.createElement("div");
+        ship.className = "ship";
+        ship.textContent = `hits on ${spec.hit}${spec.mod ? (spec.mod > 0 ? `+${spec.mod}` : spec.mod) : ""}`;
+
+        if (result >= spec.hit) {
+            hits++;
+            ship.classList.add("hit");
+        } else {
+            failures++;
+            ship.classList.add("miss");
+        }
+
+        document.getElementById("ships").appendChild(ship);
+    }
+
     return [hits, failures];
 }
+
+// Build unit controls on page load
+function createUnitControls() {
+    const list = document.getElementById("unitList");
+    list.innerHTML = "";
+    counts = {};
+    const units = raceUnits[currentRace];
+    for (const key in units) {
+        const unit = units[key];
+        const name = DISPLAY_NAMES[key] || unit.name || key;
+        const div = document.createElement("div");
+        div.className = "unit-control";
+        div.innerHTML = `
+            <span class="unit-name">${name}</span>
+            <button type="button" class="add" data-unit="${key}">+</button>
+            <button type="button" class="remove" data-unit="${key}">-</button>
+            <span id="count-${key}">0</span>
+            <label><input type="checkbox" id="upgrade-${key}"> ${name} II</label>
+        `;
+        list.appendChild(div);
+        counts[key] = 0;
+    }
+    list.addEventListener("click", e => {
+        if (e.target.classList.contains("add")) {
+            const unit = e.target.dataset.unit;
+            counts[unit]++;
+            document.getElementById(`count-${unit}`).textContent = counts[unit];
+        } else if (e.target.classList.contains("remove")) {
+            const unit = e.target.dataset.unit;
+            if (counts[unit] > 0) {
+                counts[unit]--;
+                document.getElementById(`count-${unit}`).textContent = counts[unit];
+            }
+        }
+    });
+}
+
+loadData();
 
 const buttonClick = document.getElementById("submit");
 buttonClick.addEventListener("click", mainCompute, false);
 
+function gatherSpecs() {
+    const specs = [];
+    const mod = document.getElementById("modPlus1").checked ? 1 : 0;
+    const rerolls = document.getElementById("modReroll").checked ? 1 : 0;
+
+    const units = raceUnits[currentRace];
+    const upgrades = raceUpgrades[currentRace];
+    for (const key in units) {
+        const count = counts[key];
+        if (count === 0) continue;
+        const unit = units[key];
+        const upgraded = document.getElementById(`upgrade-${key}`).checked;
+        const upgradeStats = upgrades[key] || {};
+        const hit = upgraded && upgradeStats.hit !== null ? upgradeStats.hit : unit.hit;
+        if (hit === null) continue;
+        const dice = (upgraded && upgradeStats.dice ? upgradeStats.dice : unit.dice) * count;
+        specs.push({ dice, hit, mod, rerolls });
+    }
+    return specs;
+}
+
 function mainCompute() {
-    let totalHits = 0;
-    let bestFailure = 0;
-    let failureTotal = {}
-    let userInput = document.getElementById('diceInput').value;
-    userInput = userInput.split(' ')
-    for (let i = 0; i < userInput.length; i++) {
-        userInput[i] = userInput[i].split('h');
-    }
+    const specs = gatherSpecs();
     document.getElementById("ships").innerHTML = "";
-    for (let i = 0; i < userInput.length; i++) {
-        for (let k = 0; k < userInput[i].length; k++) {
-            userInput[i][k] = parseInt(userInput[i][k]);
-        }
-    }
-    for (let i = 0; i < userInput.length; i++){
-        let hitsAndFailures = roller(userInput[i][0], userInput[i][1])
-        if (hitsAndFailures[0] >= 1) {
-            totalHits = totalHits + hitsAndFailures[0];
-        }
-        if (hitsAndFailures[1] > 0) {
-            if (bestFailure > userInput[i][1]) {
-                bestFailure = userInput[i][1];
-            }
-        }
-        failureTotal[userInput[i][1]] = hitsAndFailures[1];
-        continue
-    }
-    document.getElementById("resultText").innerHTML = `${totalHits} hit(s)`
-    document.getElementById("failures").innerHTML = "";
-    for (let property in failureTotal) {
-        let newParagraph = document.createElement("p");
-        newParagraph.appendChild(document.createTextNode(`${failureTotal[property]} failures on the ${property} hit count`));
-        document.getElementById("failures").appendChild(newParagraph);
+
+    let totalHits = 0;
+    const failureTotal = {};
+
+    for (const spec of specs) {
+        const [hits, fails] = roller(spec);
+        totalHits += hits;
+        failureTotal[spec.hit] = (failureTotal[spec.hit] || 0) + fails;
     }
 
+    document.getElementById("resultText").textContent = `${totalHits} hit(s)`;
+    const failuresDiv = document.getElementById("failures");
+    failuresDiv.innerHTML = "";
+    for (const property in failureTotal) {
+        const p = document.createElement("p");
+        p.textContent = `${failureTotal[property]} failures on the ${property} hit count`;
+        failuresDiv.appendChild(p);
+    }
 }
