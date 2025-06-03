@@ -76,8 +76,27 @@ function roller(spec) {
 }
 
 // Build unit controls on page load
+let unitListClickHandler = null;
+
+function unitListClick(e) {
+    if (e.target.classList.contains("add")) {
+        const unit = e.target.dataset.unit;
+        counts[unit]++;
+        document.getElementById(`count-${unit}`).textContent = counts[unit];
+    } else if (e.target.classList.contains("remove")) {
+        const unit = e.target.dataset.unit;
+        if (counts[unit] > 0) {
+            counts[unit]--;
+            document.getElementById(`count-${unit}`).textContent = counts[unit];
+        }
+    }
+}
+
 function createUnitControls() {
     const list = document.getElementById("unitList");
+    if (unitListClickHandler) {
+        list.removeEventListener("click", unitListClickHandler);
+    }
     list.innerHTML = "";
     counts = {};
     const units = raceUnits[currentRace];
@@ -96,19 +115,8 @@ function createUnitControls() {
         list.appendChild(div);
         counts[key] = 0;
     }
-    list.addEventListener("click", e => {
-        if (e.target.classList.contains("add")) {
-            const unit = e.target.dataset.unit;
-            counts[unit]++;
-            document.getElementById(`count-${unit}`).textContent = counts[unit];
-        } else if (e.target.classList.contains("remove")) {
-            const unit = e.target.dataset.unit;
-            if (counts[unit] > 0) {
-                counts[unit]--;
-                document.getElementById(`count-${unit}`).textContent = counts[unit];
-            }
-        }
-    });
+    unitListClickHandler = unitListClick;
+    list.addEventListener("click", unitListClickHandler);
 }
 
 loadData();

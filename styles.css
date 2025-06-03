@@ -1,5 +1,9 @@
 body {
-    background-color: black;
+    background-color: #121212;
+    color: #eee;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 h1 {
@@ -27,6 +31,8 @@ form {
     display: flex;
     flex-direction: column;
     align-items: center;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 .ship {
@@ -59,4 +65,13 @@ form {
 #raceSelectContainer {
     margin: 8px 0;
     color: white;
+}
+
+#modifiers label {
+    color: #eee;
+    margin-right: 10px;
+}
+
+button {
+    cursor: pointer;
 }
